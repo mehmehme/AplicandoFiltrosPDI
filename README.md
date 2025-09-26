@@ -1,5 +1,5 @@
 <p align="center">
-  <h1>💖 Análise e Redução de Ruído em Imagens Coloridas 💖</h1>
+  <h1>💖 Análise e Redução de Ruído em Imagens Coloridas - Exercícios 1 2 e 3 💖</h1>
 </p>
 
 <p align="center">
