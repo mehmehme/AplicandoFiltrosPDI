@@ -12,7 +12,7 @@
 
 Este projeto implementa filtros de **redução de ruído** em imagens coloridas, permitindo comparar diferentes técnicas de suavização e preservação de bordas.  
 
-1. **Exercício 1 - Galáxias com ruído **
+1. **Exercício 1 - Galáxias com ruído**
     - Pasta: `galaxia/` com várias imagens.  
    - Aplicação de filtros acumulativos:
      - **Filtro de média** → ainda mantém ruído de sal.  
