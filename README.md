@@ -32,11 +32,12 @@ O projeto também gera **histogramas dos canais RGB** para analisar visualmente 
 ---
 
 ## 📁 Estrutura do Projeto
-
+```yaml
 ├── capivara_r2.jpg # Imagem com ruído
 ├── filtros.py # Código principal com os filtros
 ├── resultados/ # Pasta para salvar imagens filtradas (opcional)
 └── README.md
+```
 
 ## ⚡ Como Usar
 
