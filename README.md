@@ -14,12 +14,12 @@ Este projeto implementa filtros de **redução de ruído** em imagens coloridas,
 
 1. **Exercício 1 - Galáxias com ruído**
     - Pasta: `galaxia/` com várias imagens.  
-   - Aplicação de filtros acumulativos:
-     - **Filtro de média** → ainda mantém ruído de sal.  
-     - **Filtro de mediana** → melhora a suavização, mas ainda aparecem ruídos cinza.  
-   - Criação de imagens finais combinando todas as imagens filtradas, para análise comparativa.  
+    - Aplicação de filtros acumulativos:
+      - **Filtro de média** → ainda mantém ruído de sal.  
+      - **Filtro de mediana** → melhora a suavização, mas ainda aparecem ruídos cinza.  
+    - Criação de imagens finais combinando todas as imagens filtradas, para análise comparativa.  
 2. **Exercício 2 - Capivara com ruído**  
-  - Imagem: `capivara_r.jpg`  
+   - Imagem: `capivara_r.jpg`  
    - Análise dos canais RGB e histograma.  
    - Aplicação de filtros:
      - **Filtro adaptativo (NL Means)** → remove quase todo o ruído, preservando texturas.  
@@ -40,20 +40,20 @@ O projeto aplica uma série de filtros para redução de ruído, distribuídos n
 
 1. **Exercício 1 – Galáxias (grayscale, várias imagens)**
 
-Filtro Adaptativo (NL Means): remove quase todo o ruído, preservando texturas.
-Filtro Bilateral: suaviza a imagem mantendo bordas.
-Filtro Gaussiano: suaviza toda a imagem, perdendo detalhes.
+- Filtro Adaptativo (NL Means): remove quase todo o ruído, preservando texturas.
+- Filtro Bilateral: suaviza a imagem mantendo bordas.
+- Filtro Gaussiano: suaviza toda a imagem, perdendo detalhes.
 
 2. **Exercício 2 – Capivara com ruído**
 
-Filtro de Média: suaviza, mas ainda mantém ruído tipo “sal”.
-Filtro de Mediana: reduz ruído, melhor que média, mas ainda há ruídos residuais.
+- Filtro de Média: suaviza, mas ainda mantém ruído tipo “sal”.
+- Filtro de Mediana: reduz ruído, melhor que média, mas ainda há ruídos residuais.
 
 3. **Exercício 3 – Capivara colorida com ruído**
 
-Filtro Adaptativo de Mediana: ajusta a vizinhança do pixel adaptativamente para remover ruído tipo sal e pimenta.
-Filtro de Mediana Simples: substitui cada pixel pela mediana da vizinhança.
-Filtro de Média Alpha-Cortada: ignora os valores extremos na vizinhança antes de calcular a média, reduzindo outliers.
+- Filtro Adaptativo de Mediana: ajusta a vizinhança do pixel adaptativamente para remover ruído tipo sal e pimenta.
+- Filtro de Mediana Simples: substitui cada pixel pela mediana da vizinhança.
+- Filtro de Média Alpha-Cortada: ignora os valores extremos na vizinhança antes de calcular a média, reduzindo outliers.
 
 Além disso, o projeto gera histogramas dos canais RGB ou grayscale, permitindo comparar visualmente o efeito de cada filtro e identificar padrões de ruído.
 
