@@ -12,13 +12,50 @@
 
 Este projeto implementa filtros de **redução de ruído** em imagens coloridas, permitindo comparar diferentes técnicas de suavização e preservação de bordas.  
 
-Os filtros implementados incluem:  
+1. **Exercício 1 - Galáxias com ruído **
+    - Pasta: `galaxia/` com várias imagens.  
+   - Aplicação de filtros acumulativos:
+     - **Filtro de média** → ainda mantém ruído de sal.  
+     - **Filtro de mediana** → melhora a suavização, mas ainda aparecem ruídos cinza.  
+   - Criação de imagens finais combinando todas as imagens filtradas, para análise comparativa.  
+2. **Exercício 2 - Capivara com ruído**  
+  - Imagem: `capivara_r.jpg`  
+   - Análise dos canais RGB e histograma.  
+   - Aplicação de filtros:
+     - **Filtro adaptativo (NL Means)** → remove quase todo o ruído, preservando texturas.  
+     - **Filtro bilateral** → suaviza mantendo bordas.  
+     - **Filtro gaussiano** → suaviza toda a imagem, perdendo detalhes.
+3. **Exercício 3 - Filtros adaptativo de mediana, mediana simples e média alpha-cortada**  
+   - Imagem: colorida (RGB)  
+   - Filtros aplicados:
+     - **Mediana adaptativa** → ajusta a vizinhança para cada pixel, removendo ruído tipo sal e pimenta.  
+     - **Mediana simples** → substitui pixel pela mediana da vizinhança.  
+     - **Média alpha-cortada** → ignora os valores extremos antes de calcular a média, reduzindo outliers.  
+   - Observação: cada filtro foi aplicado em **cada canal separadamente**, mantendo cores coerentes.  
 
-- **Filtro Adaptativo de Mediana**: ajusta a vizinhança do pixel adaptativamente para remover ruído tipo sal e pimenta.  
-- **Filtro de Mediana Simples**: substitui cada pixel pela mediana da vizinhança.  
-- **Filtro de Média Alpha-Cortada**: ignora os valores extremos na vizinhança antes de calcular a média, reduzindo outliers.  
+---
+🔹 Filtros Implementados
 
-O projeto também gera **histogramas dos canais RGB** para analisar visualmente os padrões de ruído antes e depois da filtragem.  
+O projeto aplica uma série de filtros para redução de ruído, distribuídos nos três exercícios:
+
+1. **Exercício 1 – Galáxias (grayscale, várias imagens)**
+
+Filtro Adaptativo (NL Means): remove quase todo o ruído, preservando texturas.
+Filtro Bilateral: suaviza a imagem mantendo bordas.
+Filtro Gaussiano: suaviza toda a imagem, perdendo detalhes.
+
+2. **Exercício 2 – Capivara com ruído**
+
+Filtro de Média: suaviza, mas ainda mantém ruído tipo “sal”.
+Filtro de Mediana: reduz ruído, melhor que média, mas ainda há ruídos residuais.
+
+3. **Exercício 3 – Capivara colorida com ruído**
+
+Filtro Adaptativo de Mediana: ajusta a vizinhança do pixel adaptativamente para remover ruído tipo sal e pimenta.
+Filtro de Mediana Simples: substitui cada pixel pela mediana da vizinhança.
+Filtro de Média Alpha-Cortada: ignora os valores extremos na vizinhança antes de calcular a média, reduzindo outliers.
+
+Além disso, o projeto gera histogramas dos canais RGB ou grayscale, permitindo comparar visualmente o efeito de cada filtro e identificar padrões de ruído.
 
 ---
 
@@ -27,16 +64,21 @@ O projeto também gera **histogramas dos canais RGB** para analisar visualmente 
 - Python 3.x  
 - OpenCV  
 - NumPy  
-- Matplotlib  
+- Matplotlib   
 
 ---
 
 ## 📁 Estrutura do Projeto
 ```yaml
 ├── capivara_r2.jpg # Imagem com ruído
-├── filtros.py # Código principal com os filtros
-├── resultados/ # Pasta para salvar imagens filtradas (opcional)
-└── README.md
+├── exc_01.py
+├── exc_02.py
+├── exc_03.py 
+├── capivara_r.jpg # Imagem do exercício 1
+├── galaxia/ # Pasta com imagens do exercício 2
+├── saida_media.jpg # Resultado final do filtro de média
+├── saida_mediana.jpg # Resultado final do filtro de mediana
+├── READ.me
 ```
 
 ## ⚡ Como Usar
@@ -53,13 +95,11 @@ pip install opencv-python numpy matplotlib
 Execute o script principal:
 
 ```bash
-python filtros.py
+exc_01.py
+exc_02.py
+exc_03.py
 ```
 O script exibirá:
-
-A imagem original
-
-Imagens filtradas: Adaptativa, Mediana, Alpha-Cortada
 
 Histogramas dos canais RGB
 
