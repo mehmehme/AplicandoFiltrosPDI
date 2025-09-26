@@ -108,4 +108,4 @@ Comparar visualmente e estatisticamente o efeito de diferentes filtros na remoç
 
 Fornecer uma base para estudos de processamento de imagens coloridas e técnicas de redução de ruído adaptativa.
 
-<p align="center">✨ Projeto criado com 💜 por [Seu Nome] ✨</p> ```
+<p align="center">✨ Projeto criado com 💜 por Elisinha ✨</p> ```
